@@ -13,7 +13,7 @@ docker run -d -p 1313:1313 \
 To build the static site, use this command (be sure the 'public' directory exists from your side) :
 
 ```
-docker run \
+mkdir -p ./public && docker run \
   -v $(pwd):/site/content \
   -v $(pwd)/public:/site/public \
   nocquidant/huslibu:latest hugo

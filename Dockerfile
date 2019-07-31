@@ -47,9 +47,6 @@ COPY config.toml .
 COPY oui-logo.png content/
 COPY _index.md content/
 
-# empty folder to build the site
-RUN mkdir -p public
-
 # serve site by default
 ENV HUGO_BASE_URL http://localhost:1313
 CMD hugo serve -b ${HUGO_BASE_URL} --bind=0.0.0.0 -D
