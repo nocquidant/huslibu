@@ -1,19 +1,19 @@
 +++
-title = "reveal-hugo"
-description = "A Hugo theme for creating Reveal.js presentations"
+title = "Reveal evTech"
+description = "A simple tool for creating evTech presentations"
 outputs = ["Reveal"]
+[logo]
+src = "oui-logo.png"
+alt = "OUI.sncf logo"
 [reveal_hugo]
 custom_theme = "reveal-hugo/themes/robot-lung.css"
 margin = 0.2
 highlight_theme = "color-brewer"
 transition = "slide"
 transition_speed = "fast"
-[reveal_hugo.templates.hotpink]
-class = "hotpink"
-background = "#FF4081"
 +++
 
-# 📽️
+#  📽️
 
 # reveal evTech
 
