@@ -1,0 +1,15 @@
+sudo: required
+services:
+  - docker
+
+env:
+  global:
+    - secure: "todo"
+    - secure: "todo"
+
+script:
+  - make image
+  - IMGTAG=travis-${TRAVIS_BUILD_ID} make tag-image
+  - IMGTAG=latest make tag-image
+  - make docker-login 
+  - make push-image

@@ -20,4 +20,3 @@ RUN mkdir -p reveal-hugo/themes
 COPY robot-lung.css reveal-hugo/themes
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "hugo"]
-CMD [ "--help" ]
