@@ -7,7 +7,7 @@ While in draft mode, use this command :
 ```
 docker run -d -p 1313:1313 \
   -v $(pwd)/myprez:/site/content/myprez \
-  nocquidant/huslibu:latest serve --bind=0.0.0.0 -D
+  nocquidant/huslibu:latest
 ```	
 
 To build the static site, use this command (be sure the 'public' directory exists from your side) :
@@ -16,5 +16,5 @@ To build the static site, use this command (be sure the 'public' directory exist
 docker run \
   -v $(pwd):/site/content \
   -v $(pwd)/public:/site/public \
-  nocquidant/huslibu:latest
+  nocquidant/huslibu:latest hugo
 ```	

@@ -5,7 +5,7 @@ ENV HUGO_VERSION=0.56.2
 # download hugo
 RUN \
   adduser -h /site -s /sbin/nologin -u 1000 -D hugo && \
-  apk add --no-cache dumb-init wget bash git openssh bind-tools curl \
+  apk add --no-cache wget bash git openssh bind-tools \
   && wget --no-check-certificate https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
   && tar zxvf hugo_${HUGO_VERSION}_Linux-64bit.tar.gz \
   && mv hugo /bin/hugo \
@@ -47,7 +47,9 @@ COPY config.toml .
 COPY oui-logo.png content/
 COPY _index.md content/
 
-# public
+# empty folder to build the site
 RUN mkdir -p public
 
-ENTRYPOINT ["/usr/bin/dumb-init", "--", "hugo"]
+# serve site by default
+ENV HUGO_BASE_URL http://localhost:1313
+CMD hugo serve -b ${HUGO_BASE_URL} --bind=0.0.0.0 -D
