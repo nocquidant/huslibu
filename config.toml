@@ -1,0 +1,15 @@
+languageCode = "fr-fr"
+disableKinds = ["sitemap", "RSS"]
+themesDir = "./themes"
+theme = "reveal-hugo"
+
+[author]
+name = "SRE Team"
+
+[params.reveal_hugo]
+history = true
+
+[outputFormats.Reveal]
+baseName = "index"
+mediaType = "text/html"
+isHTML = true

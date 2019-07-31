@@ -17,6 +17,11 @@ EXPOSE  1313
 
 RUN hugo new site .
 RUN mkdir -p reveal-hugo/themes
+
+RUN git init
+RUN git submodule add git@github.com:dzello/reveal-hugo.git themes/reveal-hugo
+
+COPY config.toml .
 COPY robot-lung.css reveal-hugo/themes
 
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "hugo"]
