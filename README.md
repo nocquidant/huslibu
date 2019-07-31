@@ -7,8 +7,8 @@ While in writing mode, use this command :
 
 ```
 docker run -d -p 1313:1313 \
-  -v $(pwd):/site/content \
-  nocquidant/hsb:latest serve -D
+  -v $(pwd)/my-folder:/site/content/my-folder \
+  nocquidant/huslibu:latest serve --bind=0.0.0.0 -D
 ```	
 
 While in building mode, use this command :
@@ -17,5 +17,5 @@ While in building mode, use this command :
 docker run -d -p 1313:1313 \
   -v $(pwd):/site/content \
   -v $(pwd)/public:/site/public \
-  nocquidant/hsb:latest
+  nocquidant/huslibu:latest
 ```	

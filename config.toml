@@ -1,6 +1,6 @@
 languageCode = "fr-fr"
+title = "An experimentation to create presentations with Markdown and reveal-hugo"
 disableKinds = ["sitemap", "RSS"]
-themesDir = "./themes"
 theme = "reveal-hugo"
 
 [author]
