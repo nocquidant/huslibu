@@ -47,4 +47,7 @@ COPY config.toml .
 COPY oui-logo.png content/
 COPY _index.md content/
 
+# public
+RUN mkdir -p public
+
 ENTRYPOINT ["/usr/bin/dumb-init", "--", "hugo"]

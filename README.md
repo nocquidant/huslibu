@@ -10,10 +10,10 @@ docker run -d -p 1313:1313 \
   nocquidant/huslibu:latest serve --bind=0.0.0.0 -D
 ```	
 
-While in building mode, use this command :
+While in building mode, use this command (be sure public dir exists) :
 
 ```
-docker run -d -p 1313:1313 \
+docker run \
   -v $(pwd):/site/content \
   -v $(pwd)/public:/site/public \
   nocquidant/huslibu:latest
