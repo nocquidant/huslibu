@@ -1,15 +1,15 @@
-languageCode = "fr-fr"
-title = "An experimentation to create presentations with Markdown and reveal-hugo"
-disableKinds = ["sitemap", "RSS"]
-theme = "reveal-hugo"
+    languageCode = "fr-fr"
+    title = "An experimentation to create presentations with Markdown and reveal-hugo"
+    disableKinds = ["sitemap", "RSS"]
+    theme = "reveal-hugo"
 
-[author]
-name = "SRE Team"
+    [author]
+    name = "SRE Team"
 
-[params.reveal_hugo]
-history = true
+    [params.reveal_hugo]
+    history = true
 
-[outputFormats.Reveal]
-baseName = "index"
-mediaType = "text/html"
-isHTML = true
+    [outputFormats.Reveal]
+    baseName = "index"
+    mediaType = "text/html"
+    isHTML = true

@@ -6,8 +6,10 @@ While in draft mode, use this command :
 
 ```
 docker run -d -p 1313:1313 \
+  --name huslibu \
   -v $(pwd)/myprez:/site/content/myprez \
-  nocquidant/huslibu:latest
+  nocquidant/huslibu:latest \
+&& docker logs -f huslibu 
 ```	
 
 To build the static site, use this command (be sure the 'public' directory exists from your side) :

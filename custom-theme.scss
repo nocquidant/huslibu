@@ -1,0 +1,48 @@
+@import "reveal-js/css/theme/template/mixins";
+@import "reveal-js/css/theme/template/settings";
+
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:300,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+$mainFontSize: 30px;
+$mainFont: 'Roboto Slab', sans-serif;
+$mainColor: #000;
+$headingFont: 'Roboto', Impact, sans-serif;
+$headingFontWeight: 600;
+$headingColor: #000;
+$headingTextShadow: none;
+$headingTextTransform: uppercase;
+$backgroundColor: #fff;
+$linkColor: #ea5330;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+@import "reveal-js/css/theme/template/theme";
+
+.reveal {
+	color: #141414;
+}	
+.reveal section img {
+	margin: 15px 0px;
+	background: rgba(255,255,255,0.12);
+	border: 0px solid $mainColor;
+	box-shadow: 0 0 0px rgba(0, 0, 0, 0.15);
+}
+section.has-light-background {
+ 	&, h1, h2, h3, h4, h5, h6 {
+ 		color: #222;
+ 	}
+ }
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+.reveal pre {
+	margin: 50px auto;
+}
