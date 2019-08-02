@@ -6,9 +6,8 @@ outputs = ["Reveal"]
 src = "oui-logo.png"
 alt = "OUI.sncf logo"
 [reveal_hugo]
-highlight_theme = "color-brewer"
-transition = "slide"
-transition_speed = "fast"
+custom_theme = "custom-theme.scss"
+custom_theme_compile = true
 +++
 
 #  📽️  
